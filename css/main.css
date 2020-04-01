@@ -1,0 +1,14 @@
+html {
+    background-color: lightgray;
+}
+
+body {
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}

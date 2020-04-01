@@ -34,14 +34,10 @@ class Article {
         <!-- Otherwise we need to do concatenation! -->
         <dt>Content:</dt>
         <dd>${this.content}</dd>
-      </dl>
-    `;
-        }
+      </dl> `; }
     }
   }
 
-  
-  
   const blogArticles = [
     new Article(
       'First Day of Class (C#)',
@@ -71,6 +67,11 @@ class Article {
   
   // TODO: Add a new article to the array (add "SASS" inbetween the "CSS" and "JS" articles.)
   
+  blogArticles.splice(3, 0, new Article(
+    'Additional new Topic (SASS)',
+    'Today we learned how to insert a new string into the array! I am so happy that now I can do it here, It is very cool!'
+  ))
+
   for ( let article of blogArticles )
   {
     const myElement = document.body;
