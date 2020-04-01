@@ -1,3 +1,4 @@
+
 /**
  * JavaScript: Blog Exercise.
  * @author  TECHCareers by Manpower
@@ -21,12 +22,25 @@ class Article {
       this.title = title;
       this.content = content;
     }
-    output ()
+    output ( element = null )
     {
+        if ( element !== null) {
       // TODO: Prepare output to the browser...
       // TODO: Use template literals.
+      element.innerHTML += `
+      <dl><!-- This is dynamic HTML! Wow! -->
+        <dt>Title:</dt>
+        <dd>${this.title}</dd><!-- Template literal: output JS variable value in a multi-line string (\`\`). -->
+        <!-- Otherwise we need to do concatenation! -->
+        <dt>Content:</dt>
+        <dd>${this.content}</dd>
+      </dl>
+    `;
+        }
     }
   }
+
+  
   
   const blogArticles = [
     new Article(
@@ -59,5 +73,8 @@ class Article {
   
   for ( let article of blogArticles )
   {
+    const myElement = document.body;
+    console.log( Article ); // Output each product in console.
+    article.output(myElement);
     // TODO: Loop through articles and output each of them to the browser.
   }
